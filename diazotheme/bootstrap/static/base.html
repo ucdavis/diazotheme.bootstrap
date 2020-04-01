@@ -60,9 +60,10 @@
                 </a>
                <a class="brand" href="/dashboard"><img src="img/home.png"/></a>
 
-
+               
                <div class="nav-collapse" id="topnav-collapse">
-                  <ul id="nav" class="nav sm sm-blue">
+				   <ul id="main-menu" class = "sm sm-blue">
+                  <!--ul id="nav" class="nav sm sm-blue"-->
                      <li><a href="#about">About</a></li>
                      <li class="dropdown" data-dropdown='dropdown'>
                      <a href="#" class="dropdown-toggle">Services</a>
@@ -314,13 +315,20 @@
                var jQuery14 = jQuery;
             </script>
             <script src="jquery-1.7.1.min.js"></script!-->
+		    
             <script src="bootstrap/js/bootstrap.js"></script>
-            <script>
+		    <script>
+			var $ = jQuery		
+			$(function() {
+			  $('#main-menu').smartmenus();
+			});
+			</script>
+            <!--script>
                var $ = jQuery
                $(document).ready(function () {
                   jQuery('.dropdown-toggle').dropdown();
                });
-            </script>
+            </script-->
             <script defer src="js/plugins.js"></script>
             <script defer src="openid-selector/js/openid-jquery.js"></script>
             <script defer src="js/openid-providers.js"></script>
