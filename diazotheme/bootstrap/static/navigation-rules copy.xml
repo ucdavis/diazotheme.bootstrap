@@ -18,7 +18,7 @@
     <xsl:if test="ul">
         <li class="dropdown" data-dropdown="dropdown">
             <a class="dropdown-toggle" href="#"><xsl:copy-of select="a/node()"/>
-                <!--b class="caret"></b--></a>
+                <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <xsl:copy-of select="ul/node()"/>
             </ul>
