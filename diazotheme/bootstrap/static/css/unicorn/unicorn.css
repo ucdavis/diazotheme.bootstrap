@@ -1,2 +1,6 @@
 /* stylelint-disable order/properties-alphabetical-order */
 /* stylelint-enable */
+/* UCD Identity - Colors (http://identitystandards.ucdavis.edu/graphic-standards/colors.html) */
+/* Other Custom colors */
+.util-bar a {
+  color: #333333; }
