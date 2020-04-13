@@ -42,7 +42,7 @@
    
     <prepend theme="/html/head" content="/html/head/base"/>
 
-    <replace theme="//*[@id='logo']/h1" content="//*[@id='content']/h1"/>
+    <replace theme="//*[@id='brand']/h2" content="//*[@id='content']/h1"/>
 
     <after css:theme="meta[http-equiv='X-UA-Compatible']" 
         content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
@@ -157,13 +157,14 @@
             </xsl:if>
         </div>
     </replace>
+	
     <drop css:content="#enable_cookies_message"/>
     <drop css:theme=".hero-unit" css:if-not-content=".section-front-page"/>
     <drop css:theme="#left-column" css:if-not-content="#portal-column-one"/>
     <drop css:theme="#right-column" css:if-not-content="#portal-column-two"/>
 
-
-    <replace css:theme="#logo" css:content="#portal-logo"/>
+    <drop css:theme="#logo" />
+    <replace css:theme="#brand" css:content="#portal-logo"/>
 	<replace css:theme-children="#main-menu" css:content-children="#portal-globalnav" />
 
     <!--replace css:theme-children="#nav">
@@ -179,7 +180,7 @@
         <li><xsl:copy-of css:select="#personaltools-login"/></li>
     </replace>
 
-    <copy css:theme=".main-nave .nav-brand" css:content="#portal-logo" attributes="href"/>
+    <copy css:theme=".nav-brand" css:content="#portal-logo" attributes="href"/>
     <replace css:theme-children=".breadcrumb">
         <xsl:for-each css:select="#portal-breadcrumbs > span">
             <li>
@@ -187,7 +188,7 @@
             </li>
         </xsl:for-each>
     </replace>
-
+    
     <append css:theme=".footer" css:content-children="#portal-footer"/>
     <append css:theme=".footer" css:content="#portal-colophon"/>
     <append css:theme=".footer" css:content="div#visual-portal-wrapper > div.row > script"/>
