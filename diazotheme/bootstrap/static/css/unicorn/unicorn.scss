@@ -5,3 +5,29 @@
 .util-bar a {
 	color: $ucd_black_80;
 }
+.main-nav {
+    background: $ucd_blue_100;
+    background-image: linear-gradient(to bottom, #014ea4, #002b5b);
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(0, 40, 85);
+    background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, #014ea4), color-stop(100%, #002b5b));
+    background-image: -webkit-linear-gradient(to bottom, #014ea4, #002b5b);
+    background-image: -moz-linear-gradient(to bottom, #014ea4, #002b5b);
+    background-image: -o-linear-gradient(to bottom, #014ea4, #002b5b);
+    background-image: linear-gradient(to bottom, #014ea4, #002b5b);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
