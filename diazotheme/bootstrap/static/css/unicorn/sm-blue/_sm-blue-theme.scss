@@ -11,9 +11,9 @@
 // :: 1.1. Colors
 // ----------------------------------------------------------
 
-$sm-blue__blue:											#3092c0 !default;
+$sm-blue__blue:											#033266 !default;
 $sm-blue__blue-dark:									darken($sm-blue__blue, 5%) !default;
-$sm-blue__blue-darker:									#006892 !default;
+$sm-blue__blue-darker:									#022851 !default;
 $sm-blue__blue-light:									lighten($sm-blue__blue, 30%) !default;
 $sm-blue__white:										#fff !default;
 $sm-blue__gray:											darken($sm-blue__white, 34%) !default;
@@ -188,7 +188,6 @@ $sm-blue__toggle-spacing: floor($sm-blue__item-height * 0.1);
 			background: $sm-blue__collapsible-item-bg;
 			background-image: linear-gradient(to bottom, lighten($sm-blue__collapsible-item-bg, $sm-blue__gradients_amount), darken($sm-blue__collapsible-item-bg, $sm-blue__gradients_amount));
 			color: $sm-blue__collapsible-item-color;
-			font-family: $sm-blue__font-family;
 			font-size: $sm-blue__font-size-base;
 			font-weight: bold;
 			line-height: $sm-blue__line-height;

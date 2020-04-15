@@ -1,0 +1,52 @@
+/* _navigation.scss */
+
+// Secondary (top) gold menu
+.util-bar{
+    
+	background-color: $ucd_bright_gold;	
+	height: 40px;
+
+	margin-top: 56px;
+	margin-left: auto;
+	//margin-right:15px; // changes with addition of row wrap ... 105px was previous disabled value 
+	ul {
+		height:100%;
+		display:flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		margin-right: 10px;
+		margin-left: 5px;
+	  
+		li {margin:auto;
+		 	a {
+			color: $ucd_black_80;
+			text-transform: uppercase;
+		}
+		#portal-searchbox {
+			margin:auto;
+			form {margin:auto;
+				#searchGadget {
+				    width: 13em;
+				    height: 23px;
+				    margin-top: 2px;
+					
+				    }
+			   }
+		  }
+		
+		}
+	}	
+	  
+	
+}
+#searchGadget, .LSBox input.searchButton {
+    height: 33px;
+    margin-bottom: 2px;
+}
+
+@media screen and (min-width: 992px){
+.util-bar {
+    max-width: 768px;
+}
+}

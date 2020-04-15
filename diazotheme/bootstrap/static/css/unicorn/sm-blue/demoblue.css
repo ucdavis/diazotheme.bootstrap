@@ -1,4 +1,4 @@
-.main-nav {
+/*.main-nav {
   background: #3092c0;
   background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, #3298c8), color-stop(100%, #2e8cb8));
   background-image: -webkit-linear-gradient(to bottom, #3298c8, #2e8cb8);
@@ -13,7 +13,7 @@
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .main-nav:after {
   clear: both;
@@ -175,23 +175,3 @@
 }
 
 
-/* IGNORE: Unrelated generic demo styles */
-
-body {
-  margin: 8px;
-  background: #fff;
-  color: #aaa;
-  font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.demo-text {
-  margin: 3em 22px;
-}
-
-.demo-text p {
-  margin-bottom: 1em;
-}
-
-.demo-text a {
-  color: #999;
-}
