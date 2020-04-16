@@ -168,14 +168,19 @@ em {
   background-image: -moz-linear-gradient(to bottom, #014ea4, #002b5b);
   background-image: -o-linear-gradient(to bottom, #014ea4, #002b5b);
   background-image: linear-gradient(to bottom, #014ea4, #002b5b);
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  border-radius: 8px;
+  /*-webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px; */
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
 
 #portal-logo {
   margin: 0 0; }
+
+@media (min-width: 768px) {
+  #main-menu {
+    margin-right: 2em;
+    height: 80px; } }

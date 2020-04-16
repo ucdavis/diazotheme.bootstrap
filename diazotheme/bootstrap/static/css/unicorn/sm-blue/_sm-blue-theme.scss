@@ -84,7 +84,7 @@ $sm-blue__collapsible-sub-bg:							$sm-blue__white !default;
 
 // Items
 $sm-blue__collapsible-sub-item-color:					$sm-blue__blue-dark !default;
-$sm-blue__collapsible-sub-item-bg:						transparent !default;
+$sm-blue__collapsible-sub-item-bg:						#ccd4e0 !default;
 $sm-blue__collapsible-sub-item-current-color:			$sm-blue__white !default;
 $sm-blue__collapsible-sub-item-current-bg:				$sm-blue__blue-darker !default;
 $sm-blue__collapsible-sub-item-disabled-color:			darken($sm-blue__white, 30%) !default;
@@ -112,8 +112,8 @@ $sm-blue__desktop-item-hover-bg:						darken($sm-blue__blue, 5%) !default;
 $sm-blue__desktop-item-current-color:					$sm-blue__white !default;
 $sm-blue__desktop-item-current-bg:						$sm-blue__blue-darker !default;
 $sm-blue__desktop-item-disabled-color:					lighten($sm-blue__blue, 30%) !default;
-$sm-blue__desktop-item-padding-vertical:				13px !default;
-$sm-blue__desktop-item-padding-horizontal:				24px !default;
+$sm-blue__desktop-item-padding-vertical:				28px !default;
+$sm-blue__desktop-item-padding-horizontal:				26px !default;
 
 // Items separators
 $sm-blue__desktop-separators-size:						1px !default;
@@ -145,7 +145,8 @@ $sm-blue__desktop-sub-padding-horizontal:				0 !default;
 
 // Items
 $sm-blue__desktop-sub-item-color:						$sm-blue__blue-dark !default;
-$sm-blue__desktop-sub-item-bg:							transparent !default;
+$sm-blue__desktop-sub-item-bg:							 !default;
+
 $sm-blue__desktop-sub-item-hover-color:					$sm-blue__white !default;
 $sm-blue__desktop-sub-item-hover-bg:					$sm-blue__blue !default;
 $sm-blue__desktop-sub-item-current-color:				$sm-blue__white !default;
