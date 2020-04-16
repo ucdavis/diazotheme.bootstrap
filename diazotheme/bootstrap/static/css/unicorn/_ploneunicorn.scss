@@ -27,8 +27,18 @@
 #portal-logo {
 	margin:0 0;
 }
-@media (min-width: 768px) {
+@media (min-width: $screen-lg) {
 #main-menu { margin-right:2em;
 	height:80px;
 }
 }
+@media (min-width: $screen-lg){
+.sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    padding: 28px 26px;}
+}
+@media (max-width: $screen-lg){
+#portal-logo {width:300px;}	
+}
+@media (min-width: $screen-lg-min) {
+	.container {width:$container-large-desktop;}
+} 

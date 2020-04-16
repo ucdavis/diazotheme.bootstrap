@@ -50,6 +50,10 @@
   .util-bar {
     max-width: 768px; } }
 
+@media screen and (max-width: 992px) {
+  .util-bar {
+    width: 100%; } }
+
 @font-face {
   font-family: Proxima-Nova;
   src: url("https://campusfont.ucdavis.edu/proxima-nova/proximanova_regular_macroman/proximanova-regular-webfont.eot");
@@ -180,7 +184,19 @@ em {
 #portal-logo {
   margin: 0 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #main-menu {
     margin-right: 2em;
     height: 80px; } }
+
+@media (min-width: 1200px) {
+  .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    padding: 28px 26px; } }
+
+@media (max-width: 1200px) {
+  #portal-logo {
+    width: 300px; } }
+
+@media (min-width: 1310px) {
+  .container {
+    width: 1280px; } }
