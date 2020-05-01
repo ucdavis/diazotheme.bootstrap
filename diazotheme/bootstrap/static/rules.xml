@@ -84,6 +84,7 @@
         </xsl:copy>
     </replace>
 
+	
     <!--copy css:theme="#uti-search" css:content="#portal-searchbox form" attributes="action"/-->
     <replace css:theme="#center-column">
         <div id="center-column"><xsl:attribute name="class">

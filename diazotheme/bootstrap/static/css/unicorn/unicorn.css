@@ -200,3 +200,25 @@ em {
 @media (min-width: 1310px) {
   .container {
     width: 1280px; } }
+
+/*utility menu */
+/* live search */
+#LSResult fieldset {
+  padding: 1em 0 0;
+  border: 0.1em solid #002855; }
+
+#livesearchLegend {
+  background-color: #DAAA00;
+  padding: 0.3em; }
+
+.LSTable .LSRow a {
+  color: #335379 !important; }
+
+/* utility menu responsive */
+@media (max-width: 480px) {
+  .util-bar ul li.hidden-xs {
+    display: none; } }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .util-bar ul li.hidden-xs {
+    font-size: 0.7rem; } }

@@ -42,3 +42,28 @@
 @media (min-width: $screen-lg-min) {
 	.container {width:$container-large-desktop;}
 } 
+/*utility menu */
+/* live search */
+#LSResult fieldset {
+    padding: 1em 0 0;
+    border: 0.1em solid $ucd_blue_100;}
+	
+	#livesearchLegend {
+	    background-color: $ucd_bright_gold;
+	    padding: 0.3em;
+	}
+	.LSTable .LSRow a {
+		color: $ucd_blue_80 !important;
+	}
+
+
+	/* utility menu responsive */
+@media (max-width: $screen-xs){
+.util-bar ul li.hidden-xs{ 
+	display:none;}
+}
+@media (min-width: $screen-xs-1) and (max-width: $screen-sm-min) {
+	.util-bar ul li.hidden-xs {
+		font-size:0.7rem;
+	}
+}
