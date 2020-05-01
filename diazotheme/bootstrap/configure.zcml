@@ -6,6 +6,7 @@
     >
 
   <include package="Products.CMFCore" file="permissions.zcml" />
+  <include package=".browser" />
 
   <plone:static directory="static" type="theme" />
 
