@@ -39,7 +39,6 @@
           margin: auto; }
           .util-bar ul li #portal-searchbox form #searchGadget {
             width: 13em;
-            height: 23px;
             margin-top: 2px; }
 
 #searchGadget, .LSBox input.searchButton {
@@ -133,8 +132,7 @@ h1 {
   font-size: 2rem; }
 
 p {
-  font-weight: 400;
-  font-size: 1rem; }
+  font-weight: 400; }
 
 .light {
   font-weight: 300; }
