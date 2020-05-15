@@ -1,4 +1,4 @@
-<div id="top-carousel" class="carousel slide">
+<div id="top-carousel" class="carousel slide hidden-xs">
   <!-- Indicators -->
   <!--ol class="carousel-indicators hidden-xs">
     <li tal:repeat="item context/keys"

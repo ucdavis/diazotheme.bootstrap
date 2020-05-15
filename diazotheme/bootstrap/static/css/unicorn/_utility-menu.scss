@@ -43,6 +43,11 @@
     height: 33px;
     margin-bottom: 2px;
 }
+@media (max-width: $screen-xs) {
+	.util-bar {
+	margin-top: 0;
+}
+}
 
 @media screen and (min-width: 992px){
 .util-bar {

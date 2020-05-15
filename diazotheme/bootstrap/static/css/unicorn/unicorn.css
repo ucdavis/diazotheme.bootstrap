@@ -45,6 +45,10 @@
   height: 33px;
   margin-bottom: 2px; }
 
+@media (max-width: 480px) {
+  .util-bar {
+    margin-top: 0; } }
+
 @media screen and (min-width: 992px) {
   .util-bar {
     max-width: 768px; } }
