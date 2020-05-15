@@ -219,3 +219,8 @@ em {
 @media (min-width: 481px) and (max-width: 768px) {
   .util-bar ul li.hidden-xs {
     font-size: 0.7rem; } }
+
+/*top carousel*/
+#top-carousel.carousel {
+  height: 500px;
+  margin-bottom: 60px; }

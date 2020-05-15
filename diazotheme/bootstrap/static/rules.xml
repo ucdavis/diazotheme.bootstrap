@@ -65,14 +65,15 @@
 	<!-- Front Page Slider -->
 	<replace
 	    css:theme=".sliders"
-	    css:content="#carousel-example-generic"
+	    css:content="#top-carousel"
 	    href="/banner-images/@@slider-images"
 	    css:if-content=".template-subsite_view"
 	    />
-	<drop
+
+	<!--drop
 	    css:theme=".sliders"
 	    css:if-not-content=".template-subsite_view"
-	    />
+	    /-->
 
     <prepend css:theme="#content-columns">
         <div class="row-fluid">
