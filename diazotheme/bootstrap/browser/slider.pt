@@ -1,4 +1,4 @@
-<div id="top-carousel" class="carousel slide hidden-xs">
+<div id="top-carousel" class="carousel slide">
   <!-- Indicators -->
   <!--ol class="carousel-indicators hidden-xs">
     <li tal:repeat="item context/keys"
@@ -12,6 +12,10 @@
          class="item">
       <img tal:define="scales item/@@images"
            tal:replace="structure python: scales.tag('image', scale='large', css_class='img-responsive img-full')" />
+           <div class="carousel-caption">
+              <h4 tal:content="item/pretty_title_or_id"></h4> 
+			  <p tal:content="item/Description"></p>
+          </div>
     </div>
   </div>
 

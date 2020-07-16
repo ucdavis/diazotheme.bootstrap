@@ -195,8 +195,9 @@ em {
     padding: 28px 26px; } }
 
 @media (max-width: 1200px) {
-  #portal-logo {
-    width: 300px; } }
+  a#portal-logo img {
+    max-height: 50px;
+    width: auto; } }
 
 @media (min-width: 1310px) {
   .container {
@@ -215,10 +216,18 @@ em {
 .LSTable .LSRow a {
   color: #335379 !important; }
 
-/* utility menu responsive */
+/* utility menu responsive and carousel*/
 @media (max-width: 480px) {
   .util-bar ul li.hidden-xs {
     display: none; } }
+
+@media (max-width: 768px) {
+  .util-bar {
+    margin-top: 0; }
+  #top-carousel.carousel {
+    margin-top: 90px; }
+  .carousel .item {
+    height: 350px; } }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .util-bar ul li.hidden-xs {
@@ -245,15 +254,17 @@ em {
 
 /*top carousel*/
 #top-carousel.carousel {
-  height: 560px;
+  max-height: 560px;
   margin-bottom: 60px; }
 
 .carousel-caption {
   z-index: 10;
-  /* Since positioning the image, we need to help out the caption */ }
+  /* Since positioning the image, we need to help out the caption */
+  bottom: 10px;
+  padding-bottom: 10px; }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
+.carousel-inner > .item {
   height: 560px;
   background-color: #777; }
 
@@ -261,5 +272,8 @@ em {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: 560px; }
+  min-width: 100%; }
+
+@media (max-width: 992px) {
+  .carousel-inner > .item {
+    height: 350px; } }

@@ -67,7 +67,7 @@
 	    css:theme=".jumbotron"
 	    css:content="#top-carousel"
 	    href="/banner-images/@@slider-images"
-	    css:if-content=".template-subsite_view"
+	    css:if-content=".portaltype-front_page"
 	    />
 
 	<!--drop

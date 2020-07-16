@@ -1,3 +1,4 @@
+
 *.main-nav {
     background: $ucd_blue_100;
     background-image: linear-gradient(to bottom, #014ea4, #002b5b);
@@ -37,7 +38,10 @@
     padding: 28px 26px;}
 }
 @media (max-width: $screen-lg){
-#portal-logo {width:300px;}	
+	
+a#portal-logo img {
+    max-height: 50px;
+    width: auto }
 }
 @media (min-width: $screen-lg-min) {
 	.container {width:$container-large-desktop;}
@@ -57,10 +61,22 @@
 	}
 
 
-	/* utility menu responsive */
+	/* utility menu responsive and carousel*/
 @media (max-width: $screen-xs){
 .util-bar ul li.hidden-xs{ 
 	display:none;}
+	
+}
+@media(max-width: $screen-sm-min) {
+	.util-bar {
+		margin-top:0;
+	}
+	#top-carousel.carousel {
+		margin-top:90px;
+	}
+	.carousel .item {
+		height:350px;
+	}
 }
 @media (min-width: $screen-xs-1) and (max-width: $screen-sm-min) {
 	.util-bar ul li.hidden-xs {
@@ -89,25 +105,39 @@
 }
 /*top carousel*/
 #top-carousel.carousel {
-	    height: 560px;
+	    max-height: 560px;
 	    margin-bottom: 60px;
 }
 
 .carousel-caption {
   z-index: 10; /* Since positioning the image, we need to help out the caption */
+      bottom: 10px;
+      padding-bottom: 10px;
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 560px;
+.carousel-inner > .item {
+  height: 560px; 
   background-color: #777;
 }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 560px;
+ 
 }
+@media (max-width: $screen-md-min) {
+	
+	.carousel-inner > .item {
+		height: 350px;
+		
+	}
+	
+	
+
+}
+
 
 
