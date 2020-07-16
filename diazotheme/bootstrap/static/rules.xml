@@ -102,7 +102,8 @@
     </replace>
 
 	
-    <!--copy css:theme="#uti-search" css:content="#portal-searchbox form" attributes="action"/-->
+	<!-- portlets in header -->
+	<copy css:content="#portlets-in-header" css:theme="#header" />
     <replace css:theme="#center-column">
         <div id="center-column"><xsl:attribute name="class">
                 <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-3:4")'>
