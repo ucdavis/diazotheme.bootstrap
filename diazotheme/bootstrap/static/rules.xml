@@ -51,6 +51,7 @@
 
     <after css:theme="meta[http-equiv='X-UA-Compatible']" 
         content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
+		
 	    <replace content="//div[contains(@class,'cell')]/@class">
 	       <xsl:attribute name="class">
                <xsl:if test='contains(current(),"width-3:4")'>col-xs-9 col-sm-9 col-md-9 col-lg-9</xsl:if>
@@ -119,6 +120,7 @@
     </replace>
 	
 	<replace css:theme-children="#header" css:content="#portlets-in-header"/>
+   
 	
 	
     <replace css:theme="#center-column">
@@ -293,15 +295,11 @@
         <div style="display:hidden">.</div>
     </replace>
     <replace css:theme="#portletBelowContentB">
-		<div id="#portletBelowContentBneedsaclass"><xsl:attribute name="class">
-			<xsl:if test='contains(//*[@id="#portlets-below"]/div/@class,"width-full")'>
-				testclass
-			</xsl:if>
-		</xsl:attribute>
+		
         <xsl:for-each css:select=".BelowPortletManager2 .portletWrapper">
             <xi:include href="portlet-rules.xml"/>
         </xsl:for-each>
-	</div>
+	
         <div style="display:hidden">.</div>
     </replace>
     <replace css:theme-children="#portletBelowContentC">
