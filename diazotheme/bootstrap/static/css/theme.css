@@ -54,7 +54,7 @@ label .required {
 }
 
 #content-columns {
-    display:table;
+    
     vertical-align:top;
 }
 #left-column-content {
