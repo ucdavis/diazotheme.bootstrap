@@ -1,0 +1,40 @@
+.rec-pool-blue .panel-heading {
+    background-color: $rec_blue;
+	border-color: $rec_blue;
+	border:none;
+	color:#fff;
+	font-weight:700;
+}
+.rec-pool-blue .panel-heading span a {
+	color:#fff;
+	font-weight:700;
+}
+.panel-footer.footer {
+	padding:10px 15px;
+}
+.borderless {
+	.panel {
+		border:none;
+	
+	 .panel-heading {
+		background-color:transparent;
+		
+	}
+	.panel-body {
+		
+	}
+}
+}
+.borderless.rec-pool-blue {
+	.panel {
+		background-color:$rec-blue;
+	.panel-body, .panel-body a{
+		color:#fff;
+		
+		.panel-footer{
+			background-color:$rec-blue;
+			
+			
+		}}
+}
+}
