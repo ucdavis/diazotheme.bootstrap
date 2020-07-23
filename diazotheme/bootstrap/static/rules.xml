@@ -116,16 +116,6 @@
 	    css:if-content=".portaltype-front_page"
 	    />
 
-<<<<<<< HEAD
-	<!--drop
-	    css:theme=".sliders"
-	    css:if-not-content=".template-subsite_view"
-	    /-->
-	<!-- portlets in header -->
-	<!--  transform all portlets  -->
-=======
->>>>>>> portlets
-	
 
 
     <!-- Search Fixups -->
@@ -140,13 +130,11 @@
     </replace>
 	
 	<replace css:theme-children="#header" css:content="#portlets-in-header"/>
-	
    
 	<replace css:theme="#center-column" css:content="#portal-column-content" />
 	<replace css:theme="#left-column" css:content="#portal-column-one" />
 	<replace css:theme="#right-column" css:content="#portal-column-two" />
-	
-   
+
 	
     <drop css:content="#enable_cookies_message"/>
     <drop css:theme=".hero-unit" css:if-not-content=".section-front-page"/>
