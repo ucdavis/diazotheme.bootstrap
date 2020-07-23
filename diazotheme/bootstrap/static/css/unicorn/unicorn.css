@@ -16,7 +16,7 @@
 
 /* _navigation.scss */
 .util-bar {
-  background-color: #DAAA00;
+  background-color: #FFBF00;
   height: 40px;
   margin-top: 56px;
   margin-left: auto; }
@@ -157,7 +157,7 @@ em {
   font-style: italic; }
 
 *.main-nav {
-  background: #002855;
+  background: #022851;
   background-image: linear-gradient(to bottom, #014ea4, #002b5b);
   background-position-x: initial;
   background-position-y: initial;
@@ -181,6 +181,9 @@ em {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); }
+
+a {
+  color: #1D4776; }
 
 #portal-logo {
   margin: 0 0; }
@@ -207,14 +210,14 @@ em {
 /* live search */
 #LSResult fieldset {
   padding: 1em 0 0;
-  border: 0.1em solid #002855; }
+  border: 0.1em solid #022851; }
 
 #livesearchLegend {
-  background-color: #DAAA00;
+  background-color: #FFBF00;
   padding: 0.3em; }
 
 .LSTable .LSRow a {
-  color: #335379 !important; }
+  color: #1D4776 !important; }
 
 /* utility menu responsive and carousel*/
 @media (max-width: 480px) {
@@ -277,3 +280,29 @@ em {
 @media (max-width: 992px) {
   .carousel-inner > .item {
     height: 350px; } }
+
+.rec-pool-blue .panel-heading {
+  background-color: #008EAA;
+  border-color: #008EAA;
+  border: none;
+  color: #fff;
+  font-weight: 700; }
+
+.rec-pool-blue .panel-heading span a {
+  color: #fff;
+  font-weight: 700; }
+
+.panel-footer.footer {
+  padding: 10px 15px; }
+
+.borderless .panel {
+  border: none; }
+  .borderless .panel .panel-heading {
+    background-color: transparent; }
+
+.borderless.rec-pool-blue .panel {
+  background-color: #008EAA; }
+  .borderless.rec-pool-blue .panel .panel-body, .borderless.rec-pool-blue .panel .panel-body a {
+    color: #fff; }
+    .borderless.rec-pool-blue .panel .panel-body .panel-footer, .borderless.rec-pool-blue .panel .panel-body a .panel-footer {
+      background-color: #008EAA; }

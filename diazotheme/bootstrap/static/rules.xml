@@ -52,25 +52,51 @@
     <after css:theme="meta[http-equiv='X-UA-Compatible']" 
         content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
 		
-		
-		
-	    <replace content="//div[contains(@class,'cell')]/@class">
-	       <xsl:attribute name="class">
-			 
-               <xsl:if test='contains(current(),"width-3:4")'>col-xs-9 col-sm-9 col-md-9 col-lg-9</xsl:if>
-               <xsl:if test='contains(current(),"width-2:3")'>col-xs-8 col-sm-8 col-md-8 col-lg-8</xsl:if>
-               <xsl:if test='contains(current(),"width-1:2")'>col-xs-12 col-sm-6 col-md-6 col-lg-6</xsl:if>
-               <xsl:if test='contains(current(),"width-1:3")'>col-xs-4 col-sm-4 col-md-4 col-lg-4</xsl:if>
-               <xsl:if test='contains(current(),"width-1:4")'>col-xs-3 col-sm-3 col-md-3 col-lg-3</xsl:if>
-               <xsl:if test='contains(current(),"width-full")'>col-xs-12 col-sm-12 col-md-12 col-lg-12</xsl:if>         
-               <xsl:if test='contains(current(),"width-12")'>col-xs-12 col-sm-12 col-md-9 col-lg-9</xsl:if>
-               <xsl:if test='contains(current(),"width-8")'>col-xs-12 col-sm-12 col-md-6 col-lg-6</xsl:if>
-               <xsl:if test='contains(current(),"width-5")'>col-xs-12 col-sm-12 col-md-4 col-lg-4</xsl:if>
-               <xsl:if test='contains(current(),"width-4")'>col-xs-12 col-sm-12 col-md-3 col-lg-3</xsl:if>
-			   
-	       </xsl:attribute>
+
+	    <replace content="//div[contains(@class,'cell')]/@class" method="raw">
+			  <xsl:attribute name="class">
+                  <xsl:if test='contains(current(),"width-3:4")'>
+					  <xsl:value-of select="concat(current(),' col-xs-9 col-sm-9 col-md-9 col-lg-9')"/></xsl:if>
+                  <xsl:if test='contains(current(),"width-2:3")'>
+					  <xsl:value-of select="concat(current(),' col-xs-8 col-sm-8 col-md-8 col-lg-8')"/></xsl:if>
+                  <xsl:if test='contains(current(),"width-1:2")'>
+					  <xsl:value-of select="concat(current(),' col-xs-12 col-sm-6 col-md-6 col-lg-6')"/></xsl:if>
+                  <xsl:if test='contains(current(),"width-1:3")'>
+				  <xsl:value-of select="concat(current(),' col-xs-4 col-sm-4 col-md-4 col-lg-4')"/></xsl:if>
+                  <xsl:if test='contains(current(),"width-1:4")'>
+					  <xsl:value-of select="concat(current(), ' col-xs-12 col-sm-3 col-md-3 col-lg-3')"/></xsl:if>
+               <xsl:if test='contains(current(),"width-full")'>
+				   <xsl:value-of select="concat(current(),' col-xs-12 col-sm-12 col-md-12 col-lg-12')"/>
+				</xsl:if>
+			  </xsl:attribute>
 	     </replace>	
-		
+	
+<!-- transform all portlets -->
+<replace css:content=".portletWrapper">
+<div class="pWwrapper">
+<div>
+<xsl:attribute name="data-portlethash"><xsl:value-of select="@data-portlethash"/></xsl:attribute>
+<xsl:attribute name="class"><xsl:value-of select="concat(@class, ' PortletWrapper')" /></xsl:attribute>
+<div class="panel panel-default">
+    <xsl:for-each css:select=".portletWrapper > dl">
+        <div class="panel-heading">
+          <xsl:copy-of select="dt/node()"/>
+       </div>
+      <div class="panel-body">
+       <xsl:for-each css:select="dd">
+         <div>
+            <xsl:if test="@class[contains(.,'portletFooter')]">
+              <xsl:attribute name="class">panel-footer footer</xsl:attribute>
+           </xsl:if>
+          <xsl:copy-of select="node()"/>
+       </div>
+    </xsl:for-each>
+ </div>
+</xsl:for-each>
+</div>
+</div>
+</div>
+</replace>
     
     <append css:theme="#header">
         <xsl:if css:test=".AbovePortletManager1">
@@ -90,27 +116,16 @@
 	    css:if-content=".portaltype-front_page"
 	    />
 
+<<<<<<< HEAD
 	<!--drop
 	    css:theme=".sliders"
 	    css:if-not-content=".template-subsite_view"
 	    /-->
 	<!-- portlets in header -->
 	<!--  transform all portlets  -->
+=======
+>>>>>>> portlets
 	
-
-    <prepend css:theme="#content-columns">
-        <div class="row-fluid">
-            <div class="col-xs-12">
-        <xsl:if css:test=".AbovePortletManager2">
-            <div id="portletHeader">
-                <xsl:for-each css:select=".AbovePortletManager2 .portletWrapper">
-                    <xi:include href="portlet-rules.xml"/>
-                </xsl:for-each>
-            </div>
-        </xsl:if>
-            </div>
-        </div>
-    </prepend>
 
 
     <!-- Search Fixups -->
@@ -127,90 +142,11 @@
 	<replace css:theme-children="#header" css:content="#portlets-in-header"/>
 	
    
+	<replace css:theme="#center-column" css:content="#portal-column-content" />
+	<replace css:theme="#left-column" css:content="#portal-column-one" />
+	<replace css:theme="#right-column" css:content="#portal-column-two" />
 	
-	
-    <replace css:theme="#center-column">
-		 <div id="center-column"><xsl:attribute name="class">
-                <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-3:4")'>
-                    twocolumns col-xs-9 col-sm-9 col-md-9 col-lg-9
-                </xsl:if>
-                <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-1:2")'>
-                    threecolumns col-xs-6 col-sm-6 col-md-6 col-lg-6
-                </xsl:if>
-                <xsl:if test='contains(//*[@id="portal-column-content"]/@class,"width-full")'>
-                    nocolumns col-xs-12 col-sm-12 col-md-12 col-lg-12
-                </xsl:if>
-            </xsl:attribute>
-            <xsl:if css:test=".AbovePortletManager3">
-                <div id="portletAboveContent">
-                    <xsl:for-each css:select=".AbovePortletManager3 .portletWrapper">
-                        <xi:include href="portlet-rules.xml"/>
-                    </xsl:for-each>
-                </div>
-            </xsl:if>
-            <div id="#viewlet-above-content">
-                <xsl:for-each css:select="#viewlet-above-content > *">
-                    <xsl:if test="@id">
-                    <xsl:if test="@id!='portlets-above' and
-                                  @id!='portal-breadcrumbs'">
-                        <xsl:copy-of select="current()"/>
-                    </xsl:if>
-                    </xsl:if>
-                    <xsl:if test="not(@id)">
-                        <xsl:copy-of select="current()"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </div>
-            <article>
-                <xsl:copy-of css:select="#kssPortalMessage"/>
-                <xsl:copy-of css:select=".portalMessage"/>
-                <div id="action-bar">
-                    <ul class="nav nav-tabs">
-                    <xsl:for-each css:select="#content-views > li">
-                        <xi:include href="navigation-rules.xml"/>
-                    </xsl:for-each>
-                    <xsl:for-each css:select="#contentActionMenus > li">
-                        <li class="dropdown pull-right" data-dropdown="dropdown">
-                            <a class="dropdown-toggle" href="#"><xsl:attribute name="href">
-                                    <xsl:value-of select="dl/dt/a/@href"/>
-                                </xsl:attribute>
-                                <xsl:copy-of select="dl/dt/a/span"/>
-                                <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu" style="min-width:150px;">
-                                <xsl:for-each css:select=".actionMenuContent > ul > li">
-                                    <xsl:copy-of select="current()"/>
-                                </xsl:for-each>
-                            </ul>
-                        </li>
-                    </xsl:for-each>
-                    </ul>
-                </div>
-
-                <xsl:apply-templates css:select="#content"/>
-            </article>
-            <div class="visualClear"/>
-            <div id="#viewlet-below-content">
-                <xsl:for-each css:select="#viewlet-below-content > *">
-                    <xsl:if test="@id">
-                    <xsl:if test="@id!='portlets-below'">
-                        <xsl:copy-of select="current()"/>
-                    </xsl:if>
-                    </xsl:if>
-                    <xsl:if test="not(@id)">
-                        <xsl:copy-of select="current()"/>
-                    </xsl:if>
-                </xsl:for-each>
-            </div>
-            <xsl:if css:test=".BelowPortletManager5">
-                <div id="portletBelowContent">
-                    <xsl:for-each css:select=".BelowPortletManager5 .portletWrapper">
-                        <xi:include href="portlet-rules.xml"/>
-                    </xsl:for-each>
-                </div>
-            </xsl:if>
-        </div>
-    </replace>
+   
 	
     <drop css:content="#enable_cookies_message"/>
     <drop css:theme=".hero-unit" css:if-not-content=".section-front-page"/>
@@ -221,11 +157,7 @@
     <replace css:theme="#brand" css:content="#portal-logo"/>
 	<replace css:theme-children="#main-menu" css:content-children="#portal-globalnav" />
 
-    <!--replace css:theme-children="#nav">
-        <xsl:for-each css:select="#portal-globalnav > li">
-            <xi:include href="navigation-rules.xml"/>
-        </xsl:for-each>
-    </replace-->
+   
     <replace css:theme-children="#personaltool-menu" 
         css:content-children="#portal-personaltools ul"/>
     <replace css:theme-children="#personaltool-menuheader" 
@@ -242,126 +174,12 @@
             </li>
         </xsl:for-each>
     </replace>
-    
-    <append css:theme=".footer" css:content-children="#portal-footer"/>
-    <append css:theme=".footer" css:content="#portal-colophon"/>
+ 
+     <drop css:theme="#portletBelowContentManager" />
+     <replace css:theme-children=".footer" css:content-children="#portal-footer-wrapper"/>
     <append css:theme=".footer" css:content="div#visual-portal-wrapper > div.row > script"/>
-
-    <append css:theme="#left-column-content"
-        css:content="#portletmanager-plone-leftcolumn"/>
-    <replace css:theme-children="#left-column-content">
-        <div>
-            <xsl:for-each css:select="#portal-column-one .portletWrapper">
-                <xi:include href="portlet-rules.xml"/>
-            </xsl:for-each>
-            <xsl:copy-of css:select="#portal-column-one .managePortletsLink"/>
-        </div>
-    </replace>
-
-    <append css:theme="#right-column-content"
-        css:content="#portletmanager-plone-rightcolumn"/>
-    <replace css:theme-children="#right-column-content">
-        <div>
-            <xsl:for-each css:select="#portal-column-two .portletWrapper">
-                <xi:include href="portlet-rules.xml"/>
-            </xsl:for-each>
-            <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
-        </div>
-    </replace>
-	
-  <!--rules css-if-content="#portlets-in-header">
-	<replace css:theme-children="#InHeaderPortletManager1">
-        <xsl:for-each css:select=".InHeaderPortletManager1 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-	</replace>
-    <replace css:theme-children="#InHeaderPortletManager2">
-        <xsl:for-each css:select=".InHeaderPortletManager2 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-	</replace>
-    <replace css:theme-children="#InHeaderPortletManager3">
-        <xsl:for-each css:select=".InHeaderPortletManager3 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-	</replace>
-</rules-->
-  <!--replace css:theme-children="#header" css:content="#portlets-in-header"-->
 	 
    
-    <replace css:theme-children="#portletBelowContentA">
-		
-        <xsl:for-each css:select=".BelowPortletManager1 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-		
-        <div style="display:hidden">.</div>
-    </replace>
-    <replace css:theme="#portletBelowContentB">
-		
-        <xsl:for-each css:select=".BelowPortletManager2 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-	
-        <div style="display:hidden">.</div>
-    </replace>
-    <replace css:theme-children="#portletBelowContentC">
-        <xsl:for-each css:select=".BelowPortletManager3 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-    <replace css:theme-children="#portletBelowContentD">
-        <xsl:for-each css:select=".BelowPortletManager4 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-    </replace>
-    <replace css:theme-children="#portletFooterA">
-        <xsl:for-each css:select=".FooterPortletManager1 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-
-    <replace css:theme-children="#portletFooterB">
-        <xsl:for-each css:select=".FooterPortletManager2 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-
-    <replace css:theme-children="#portletFooterC">
-        <xsl:for-each css:select=".FooterPortletManager3 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-
-
-    <replace css:theme-children="#portletFooterD">
-        <xsl:for-each css:select=".FooterPortletManager4 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-
-    <replace css:theme-children="#portletFooterE">
-        <xsl:for-each css:select=".FooterPortletManager5 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
-
-
-    <replace css:theme-children="#portletFooterF">
-        <xsl:for-each css:select=".FooterPortletManager6 .portletWrapper">
-            <xi:include href="portlet-rules.xml"/>
-        </xsl:for-each>
-        <div style="display:hidden">.</div>
-    </replace>
 
     <xi:include href="facetednavigation-rules.xml"/>
     <append css:theme="#site-scripts" css:content="#portal-footer-wrapper > div > script"/>
