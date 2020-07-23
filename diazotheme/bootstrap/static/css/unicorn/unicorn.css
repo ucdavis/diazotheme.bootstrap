@@ -284,3 +284,10 @@ em {
   border: none;
   color: #fff;
   font-weight: 700; }
+
+.rec-pool-blue .panel-heading span a {
+  color: #fff;
+  font-weight: 700; }
+
+.panel-footer.footer {
+  padding: 10px 15px; }
