@@ -52,7 +52,6 @@
     <after css:theme="meta[http-equiv='X-UA-Compatible']" 
         content="/html/head/link | /html/head/style | /html/head/script | /html/head/meta" />
 		
-
 	    <replace content="//div[contains(@class,'cell')]/@class" method="raw">
 			  <xsl:attribute name="class">
                   <xsl:if test='contains(current(),"width-3:4")'>
@@ -117,7 +116,6 @@
 	    />
 
 
-
     <!-- Search Fixups -->
     <drop css:content="div.searchSection" />
     <copy css:content="div#portal-searchbox" css:theme="#uti-search" />
@@ -135,7 +133,6 @@
 	<replace css:theme="#left-column" css:content="#portal-column-one" />
 	<replace css:theme="#right-column" css:content="#portal-column-two" />
 
-	
     <drop css:content="#enable_cookies_message"/>
     <drop css:theme=".hero-unit" css:if-not-content=".section-front-page"/>
     <drop css:theme="#left-column" css:if-not-content="#portal-column-one"/>
