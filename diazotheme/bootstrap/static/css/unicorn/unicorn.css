@@ -277,3 +277,10 @@ em {
 @media (max-width: 992px) {
   .carousel-inner > .item {
     height: 350px; } }
+
+.rec-pool-blue .panel-heading {
+  background-color: #008EAA;
+  border-color: #008EAA;
+  border: none;
+  color: #fff;
+  font-weight: 700; }
