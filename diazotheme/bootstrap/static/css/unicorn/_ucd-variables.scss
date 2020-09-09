@@ -21,6 +21,7 @@ $ucd_green_60: #66928b;
 $evergreen: #266041; 
 $west_redbud: #C6007E;
 $cal_popp: #F18A00;
+$poppy: #F18A00;
 $gold_lup: #FFDC00;
 $quad: #3DAE2B; //was sunny grass
 $farm_mar: #AADA91;
@@ -29,11 +30,13 @@ $wine_grape: #481268;
 $cork_oak: #ACA39A;
 $cali:#8A532F;
 $winter_sky: #5B7F95; //deprecated but in use
-$sage_green: #6CCA98;
+$sage_green: $farm_mar; //deprecated now farmer's market
 $shingle_brown: #79242F;
 $unitrans_red: #79242F;
 $pino: #76236C;
 $sunflower: #FFDC00; //new name still golden_lupine
+$cabernet: #481268; //was wine grape
+$bodega: #003A5D;
 
 
 $ucd_bright_gold: #FFBF00;

@@ -11,7 +11,29 @@
 	color:#fff;
 	
 }
-.rec-pool-blue .panel-heading span a {
+.rec-pool-blue .panel-heading a {
+	color:#fff;
+	
+}
+.winter-sky .panel-heading {
+   background-color: $winter_sky;
+	border-color: $winter_sky;
+	border:none;
+	color:#fff;
+	
+}
+.winter-sky .panel-heading a {
+	color:#fff;
+	
+}
+.shingle-brown .panel-heading {
+   background-color: $shingle_brown;
+	border-color: $shingle_brown;
+	border:none;
+	color:#fff;
+	
+}
+.shingle-brown .panel-heading a {
 	color:#fff;
 	
 }
@@ -22,18 +44,98 @@
   /*	color:#fff; */
 	
 }
-.quad .panel-heading span a {
+.quad .panel-heading a {
 	color:#000;
 	font-weight:700;
+}
+.cabernet .panel-heading {
+   background-color: $cabernet;
+	border-color: $cabernet;
+	border:none;
+	color:#fff;
+	
+}
+.cabernet .panel-heading a {
+	color:#fff;
+	
+}
+.winter-sky .panel-heading {
+   background-color: $winter_sky;
+	border-color: $winter_sky;
+	border:none;
+	color:#fff;
+	
+}
+.winter-sky .panel-heading a {
+	color:#fff;
+	
+}
+.shingle-brown .panel-heading {
+   background-color: $shingle_brown;
+	border-color: $shingle_brown;
+	border:none;
+	color:#fff;
+	
+}
+.shingle-brown .panel-heading a {
+	color:#fff;
+	
+}
+.bodega .panel-heading {
+   background-color: $bodega;
+	border-color: $bodega;
+	border:none;
+	color:#fff;
+	
+}
+.bodega .panel-heading a {
+	color:#fff;
+	
 }
 .sunflower .panel-heading {
    background-color: $sunflower;
 	border-color: $sunflower;
 	border:none;
+	font-weight:700;
+}
+.sunflower .panel-heading a {
+	color:#000;
+}
+.sage-green .panel-heading {
+   background-color: $sage_green;
+	border-color: $sage_green;
+	border:none;
+	font-weight:700;
+}
+.sage-green .panel-heading a {
+	color:#000;
+}
+.farmar .panel-heading {
+   background-color: $farm_mar;
+	border-color: $farm_mar;
+	border:none;
+	font-weight:700;
+}
+.farmar .panel-heading a {
+	color:#000;
+}
+.cork-oak .panel-heading {
+   background-color: $cork_oak;
+	border-color: $cork_oak;
+	border:none;
 	color:#fff;
 	font-weight:700;
 }
-.sunflower .panel-heading span a {
+.cork-oak .panel-heading a {
+	color:#000;
+}
+.poppy .panel-heading {
+   background-color: $poppy;
+	border-color: $poppy;
+	border:none;
+	font-weight:700;
+}
+.poppy .panel-heading a {
 	color:#000;
 }
 .panel-footer.footer {
@@ -49,6 +151,9 @@
 	}
 	.panel-body {
 		
+	}
+	.panel-footer {
+		text-shadow:none;
 	}
 }
 }
@@ -68,11 +173,13 @@
 .borderless.quad {
 	.panel {
 		background-color:$quad;
+		color:#000;
 	.panel-body, .panel-body a{
-		color:#fff;
+		color:#000;
 		
 		.panel-footer{
 			background-color:$quad;
+			
 			
 			
 		}}
@@ -91,3 +198,108 @@
 		}}
 }
 }
+.borderless.sage-green {
+	.panel {
+		background-color:$sage_green;
+	.panel-body, .panel-body a{
+		color:#000;
+		
+		.panel-footer{
+			background-color:$sage_green;
+			
+			
+		}}
+}
+}
+.borderless.farmar {
+	.panel {
+		background-color:$farm_mar;
+	.panel-body, .panel-body a{
+		color:#000;
+		
+		.panel-footer{
+			background-color:$farm_mar;
+			
+			
+		}}
+}
+}
+.borderless.cork-oak {
+	.panel {
+		background-color:$cork_oak;
+	.panel-body, .panel-body a{
+		color:#000;
+		
+		.panel-footer{
+			background-color:$cork_oak;
+			
+			
+		}}
+}
+}
+.borderless.poppy {
+	.panel {
+		background-color:$poppy;
+	.panel-body, .panel-body a{
+		color:#000;
+		
+		.panel-footer{
+			background-color:$poppy;
+			
+			
+		}}
+}
+}
+.borderless.cabernet{
+	.panel {
+		background-color:$cabernet;
+	.panel-body, .panel-body a{
+		color:#fff;
+		
+		.panel-footer{
+			background-color:$cabernet;
+			
+			
+		}}
+}
+}
+.borderless.bodega{
+	.panel {
+		background-color:$bodega;
+	.panel-body, .panel-body a{
+		color:#fff;
+		
+		.panel-footer{
+			background-color:$bodega;
+			
+			
+		}}
+}
+}
+.borderless.winter-sky{
+	.panel {
+		background-color:$winter_sky;
+	.panel-body, .panel-body a{
+		color:#fff;
+		
+		.panel-footer{
+			background-color:$winter_sky;
+			
+			
+		}}
+}
+}
+.borderless.shingle-brown{
+	.panel {
+		background-color:$shingle_brown;
+	.panel-body, .panel-body a{
+		color:#fff;
+		
+		.panel-footer{
+			background-color:$shingle_brown;
+			
+			
+		}}
+}
+}
+
