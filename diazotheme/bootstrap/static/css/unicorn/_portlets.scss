@@ -1,13 +1,27 @@
+/* portlet defaults */
 .panel-heading {
 	font-weight:700;
 }
 .panel-heading span a {
 	font-weight:700;
 }
+.panel-body {
+	background-color: $box_light_gray;
+	
+}
+/* default rec-blue portlet */
+.portletWrapper .panel-heading {
+	background-color:$rec_blue;
+	border-color:$rec_blue;
+	border-bottom: 1px solid #ddd;
+	color: #fff;
+}
+.portletWrapper .panel-heading a {
+	color:#fff;
+}
 .rec-pool-blue .panel-heading {
    background-color: $rec_blue;
 	border-color: $rec_blue;
-	border:none;
 	color:#fff;
 	
 }
@@ -18,7 +32,7 @@
 .winter-sky .panel-heading {
    background-color: $winter_sky;
 	border-color: $winter_sky;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -29,7 +43,7 @@
 .shingle-brown .panel-heading {
    background-color: $shingle_brown;
 	border-color: $shingle_brown;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -40,7 +54,9 @@
 .quad .panel-heading {
    background-color: $quad;
 	border-color: $quad;
-	border:none;
+	
+   
+	
   /*	color:#fff; */
 	
 }
@@ -51,7 +67,7 @@
 .cabernet .panel-heading {
    background-color: $cabernet;
 	border-color: $cabernet;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -62,7 +78,7 @@
 .winter-sky .panel-heading {
    background-color: $winter_sky;
 	border-color: $winter_sky;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -73,7 +89,7 @@
 .shingle-brown .panel-heading {
    background-color: $shingle_brown;
 	border-color: $shingle_brown;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -84,7 +100,7 @@
 .bodega .panel-heading {
    background-color: $bodega;
 	border-color: $bodega;
-	border:none;
+	
 	color:#fff;
 	
 }
@@ -95,7 +111,7 @@
 .sunflower .panel-heading {
    background-color: $sunflower;
 	border-color: $sunflower;
-	border:none;
+	
 	font-weight:700;
 }
 .sunflower .panel-heading a {
@@ -104,7 +120,7 @@
 .sage-green .panel-heading {
    background-color: $sage_green;
 	border-color: $sage_green;
-	border:none;
+	
 	font-weight:700;
 }
 .sage-green .panel-heading a {
@@ -113,7 +129,7 @@
 .farmar .panel-heading {
    background-color: $farm_mar;
 	border-color: $farm_mar;
-	border:none;
+	
 	font-weight:700;
 }
 .farmar .panel-heading a {
@@ -122,7 +138,7 @@
 .cork-oak .panel-heading {
    background-color: $cork_oak;
 	border-color: $cork_oak;
-	border:none;
+	
 	color:#fff;
 	font-weight:700;
 }
@@ -132,7 +148,7 @@
 .poppy .panel-heading {
    background-color: $poppy;
 	border-color: $poppy;
-	border:none;
+	
 	font-weight:700;
 }
 .poppy .panel-heading a {
@@ -143,7 +159,7 @@
 }
 .borderless {
 	.panel {
-		border:none;
+		
 	
 	 .panel-heading {
 		background-color:transparent;
@@ -162,7 +178,7 @@
 		background-color:$rec-blue;
 	.panel-body, .panel-body a{
 		color:#fff;
-		
+		background-color:$rec-blue;
 		.panel-footer{
 			background-color:$rec-blue;
 			
@@ -176,7 +192,7 @@
 		color:#000;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$quad;
 		.panel-footer{
 			background-color:$quad;
 			
@@ -190,7 +206,7 @@
 		background-color:$sunflower;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$sunflower;
 		.panel-footer{
 			background-color:$sunflower;
 			
@@ -203,7 +219,7 @@
 		background-color:$sage_green;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$sage_green;
 		.panel-footer{
 			background-color:$sage_green;
 			
@@ -216,7 +232,7 @@
 		background-color:$farm_mar;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$farm_mar;
 		.panel-footer{
 			background-color:$farm_mar;
 			
@@ -229,7 +245,7 @@
 		background-color:$cork_oak;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$cork_oak;
 		.panel-footer{
 			background-color:$cork_oak;
 			
@@ -242,7 +258,7 @@
 		background-color:$poppy;
 	.panel-body, .panel-body a{
 		color:#000;
-		
+		background-color:$poppy;
 		.panel-footer{
 			background-color:$poppy;
 			
@@ -255,7 +271,7 @@
 		background-color:$cabernet;
 	.panel-body, .panel-body a{
 		color:#fff;
-		
+		background-color:$cabernet;
 		.panel-footer{
 			background-color:$cabernet;
 			
@@ -268,7 +284,7 @@
 		background-color:$bodega;
 	.panel-body, .panel-body a{
 		color:#fff;
-		
+		background-color:$bodega;
 		.panel-footer{
 			background-color:$bodega;
 			
@@ -281,7 +297,7 @@
 		background-color:$winter_sky;
 	.panel-body, .panel-body a{
 		color:#fff;
-		
+		background-color:$winter_sky;
 		.panel-footer{
 			background-color:$winter_sky;
 			
@@ -294,7 +310,7 @@
 		background-color:$shingle_brown;
 	.panel-body, .panel-body a{
 		color:#fff;
-		
+		background-color:$shingle_brown;
 		.panel-footer{
 			background-color:$shingle_brown;
 			
@@ -302,4 +318,26 @@
 		}}
 }
 }
+/* Footer Portlets */
 
+	
+.borderless.foot-blue .panel{
+    background-color: $ucd_blue_foot;
+    border: none;
+}
+.borderless.foot-blue .panel-heading a{
+	color: #fff;
+}
+
+.borderless.foot-blue .panel-body{
+	color: #fff;
+    background-color: $ucd_blue_foot;
+    border: none; 
+	a {
+		color:#fff;
+	}
+
+}
+.borderless.foot-blue .panel-default > .panel-heading {
+	border:none;
+}

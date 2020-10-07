@@ -167,11 +167,14 @@
      <drop css:theme="#portletBelowContentManager" />
      <replace css:theme-children=".footer" css:content-children="#portal-footer-wrapper"/>
     <append css:theme=".footer" css:content="div#visual-portal-wrapper > div.row > script"/>
+	
+	<drop css:content="#portal-colophon" />
 	 
    
 
     <xi:include href="facetednavigation-rules.xml"/>
     <append css:theme="#site-scripts" css:content="#portal-footer-wrapper > div > script"/>
+	
 	
     </rules>
 </rules>

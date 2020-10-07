@@ -32,7 +32,7 @@ label .required {
     margin:0px;
 }
 
-.footer {
+/*.footer {
     background-color: #EEEEEE;
     border-top: 1px solid #E5E5E5;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.024) inset;
@@ -47,7 +47,7 @@ label .required {
     padding-right:20px;
     text-align:right;
 }
-
+*/
 
 #portletBelowContentManager {
     margin-top:20px;
@@ -127,8 +127,7 @@ label .required {
 }
 
 .navTree .navTreeItem a:hover {
-    text-decoration:none;
-    background-color: #eee;
+    text-decoration:underline;
 }
 
 #center-column.nocolumns {

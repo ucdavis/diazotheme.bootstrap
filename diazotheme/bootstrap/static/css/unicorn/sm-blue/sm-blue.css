@@ -164,7 +164,7 @@
         border-left: 0; }
     .sm-blue ul {
       border: 1px solid #a8a8a8;
-      padding: 7px 0;
+      padding: 0;
       background: #fff;
       border-radius: 0 0 4px 4px !important;
       box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2); }
