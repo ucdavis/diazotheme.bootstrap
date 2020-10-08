@@ -114,7 +114,20 @@
 	    href="/banner-images/@@slider-images"
 	    css:if-content=".portaltype-front_page"
 	    />
-
+		<!--after theme-children="/html/head" css:if-not-content=".portaltype-front_page">
+		    <style type="text/css">
+		        /* From the rules */
+		        .navbar-wrapper { background-color: url(@@banner-image); }
+		    </style>
+		</after-->
+		 
+		<after css:theme=".footerWrapper" css:if-not-content=".portaltype-front_page">
+			<script id="background_banner" type="text/javascript">
+				    $(document).ready(function() {
+				        $('.navbar-wrapper').css('background-image', 'url(@@banner-image)');
+				    });
+				</script>
+			</after>
 	
 
 
