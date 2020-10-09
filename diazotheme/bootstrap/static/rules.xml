@@ -169,19 +169,20 @@
     </replace>
 
     <copy css:theme=".nav-brand" css:content="#portal-logo" attributes="href"/>
-    <replace css:theme-children=".breadcrumb">
+    <!--replace css:theme-children=".breadcrumb">
         <xsl:for-each css:select="#portal-breadcrumbs > span">
             <li>
                 <xsl:copy-of select="node()"/>
             </li>
         </xsl:for-each>
-    </replace>
+    </replace-->
+	<replace css:theme-children=".breadcrumb" css:content-children="#portal-breadcrumbs" />
  
      <drop css:theme="#portletBelowContentManager" />
      <replace css:theme-children=".footer" css:content-children="#portal-footer-wrapper"/>
     <append css:theme=".footer" css:content="div#visual-portal-wrapper > div.row > script"/>
 	
-	<drop css:content="#portal-colophon" />
+	<drop css:content="#banner_info" />
 	 
    
 
